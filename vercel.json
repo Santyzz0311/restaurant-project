@@ -1,6 +1,0 @@
-{
-  "build": [
-    { "src": "restaurant", "use": "@vercel/node" },
-    { "rewrites": [{ "source" : "/(.*)", "destination": "/" }] }
-  ]
-}
