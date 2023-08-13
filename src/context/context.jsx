@@ -5,18 +5,23 @@ export const ContextWrapper = createContext()
 export function ContextProvider({ children }) {
 
   const [modal, setModal] = useState(false)
-  const [selector, setSelector] = useState('List Order')
-  const [order, setOrder] = useState(false)
-
-
+  const [selector, setSelector] = useState(() => {
+    const selectorFromStorage = window.localStorage.getItem('Selector')
+    return selectorFromStorage ? Boolean(selectorFromStorage) : false
+  })
+  const [menu, setMenu] = useState(() => {
+    const menuFromStorage = window.localStorage.getItem('Menu')
+    return menuFromStorage ? Boolean(menuFromStorage) : true
+  })
+  
   return (
     <ContextWrapper.Provider value={{
       modal,
       setModal,
       selector,
       setSelector,
-      order,
-      setOrder,
+      menu,
+      setMenu
     }}>
       {children}
     </ContextWrapper.Provider>

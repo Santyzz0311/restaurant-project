@@ -5,7 +5,7 @@ import entradaAcom from '../assets/entradaAcom.jpg'
 import jugosBebidas from '../assets/jugosBebidas.jpeg'
 import gaseosasBebidas from '../assets/gaseosasBebidas.jpg'
 
-export const Menu = [
+export const MenuItems = [
   {
     name: "Plato Corriente",
     value: 12000,
@@ -52,8 +52,8 @@ export const Menu = [
 
 export const Meals = [
   {
-    name: 'Elige un plato',
-    value : null
+    name: 'N/A',
+    value : 0
   },
   {
     name: "Plato Corriente",
@@ -67,7 +67,7 @@ export const Meals = [
 
 export const Specials = [
   {
-    name: 'Elige un acompañamiento',
+    name: 'N/A',
     value : null
   },
   {
@@ -82,8 +82,8 @@ export const Specials = [
 
 export const Drinks = [
   {
-    name: 'Elige una bebida',
-    value : null
+    name: 'N/A',
+    value : 0
   },
   {
     name: "Jugos Naturales",
